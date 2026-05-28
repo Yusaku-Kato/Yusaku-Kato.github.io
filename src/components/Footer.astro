@@ -1,0 +1,30 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+const lastUpdated = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+---
+
+<footer class="border-t border-slate-200 mt-16 py-8">
+  <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+    <p>&copy; {currentYear} Yusaku Kato. All rights reserved.</p>
+    <div class="flex items-center gap-4">
+      <a
+        href="https://github.com/Yusaku-Kato"
+        class="hover:text-slate-700 no-underline"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        GitHub
+      </a>
+      <a
+        href="mailto:yusaku.kato@example.com"
+        class="hover:text-slate-700 no-underline"
+        aria-label="Email"
+      >
+        Email
+      </a>
+      <span class="text-slate-400">Last updated: {lastUpdated}</span>
+    </div>
+  </div>
+</footer>

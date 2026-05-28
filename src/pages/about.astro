@@ -1,0 +1,149 @@
+---
+// src/pages/about.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const researchInterests = [
+  "AI-powered interactive systems and intelligent user interfaces",
+  "Human-Computer Interaction (HCI) and user experience research",
+  "Web Engineering and large-scale data analysis",
+  "User modeling, personalization, and adaptive systems",
+  "Explainable AI and human-AI collaboration",
+  // ↑ 研究関心を変更してください
+];
+
+const education = [
+  { degree: "Ph.D. in Computer Science", school: "Another University", period: "20XX–20XX", note: "Advisor: Prof. Sample Advisor. Dissertation: Title of Dissertation." },
+  { degree: "M.S. in Computer Science", school: "Another University", period: "20XX–20XX", note: "" },
+  { degree: "B.S. in Computer Science", school: "Yet Another University", period: "20XX–20XX", note: "" },
+  // ↑ 学歴を変更してください
+];
+
+const career = [
+  { title: "Assistant Professor", org: "Example University", period: "20XX–Present", note: "" },
+  { title: "Research Intern", org: "Sample Research Lab", period: "20XX", note: "" },
+  // ↑ 職歴を変更してください
+];
+
+const skillGroups = [
+  { category: "Programming", items: ["Python", "TypeScript", "JavaScript", "R"] },
+  { category: "Frameworks / Libraries", items: ["PyTorch", "React", "Astro", "D3.js"] },
+  { category: "Research Methods", items: ["User Studies", "Controlled Experiments", "Qualitative Analysis", "Statistical Analysis"] },
+  { category: "Tools", items: ["Git", "LaTeX", "Figma"] },
+  // ↑ スキルを変更してください
+];
+
+const keywords = [
+  "AI", "HCI", "Web Engineering", "Interactive Systems",
+  "User Modeling", "Explainable AI", "Personalization",
+  "Knowledge Work", "User Studies",
+  // ↑ キーワードを変更してください
+];
+---
+
+<BaseLayout
+  title="About — Yusaku Kato"
+  description="Profile and background of Yusaku Kato — researcher in AI, HCI, and Web Engineering."
+>
+  <div class="page-container space-y-12">
+    <header>
+      <h1 class="text-3xl font-bold text-slate-900">About</h1>
+    </header>
+
+    <!-- 自己紹介 -->
+    <section aria-labelledby="bio-heading">
+      <h2 id="bio-heading" class="section-title">Biography</h2>
+      <div class="space-y-4 text-slate-700 leading-relaxed">
+        <p>
+          {/* ↓ 自己紹介を記入してください */}
+          I am an Assistant Professor in the Department of Computer Science at Example University.
+          My research lies at the intersection of Artificial Intelligence, Human-Computer Interaction, and Web Engineering.
+          I am passionate about designing intelligent interactive systems that empower people in their daily work.
+        </p>
+        <p>
+          Before joining Example University, I was a PhD student at Another University,
+          where I received my doctorate. My advisor was Prof. Sample Advisor.
+          {/* ↑ 経歴の詳細を記入してください */}
+        </p>
+      </div>
+    </section>
+
+    <!-- 所属 -->
+    <section aria-labelledby="affiliation-heading">
+      <h2 id="affiliation-heading" class="section-title">Affiliation</h2>
+      <div class="space-y-1 text-slate-700">
+        {/* ↓ 所属を変更してください */}
+        <p class="font-medium">Department of Computer Science</p>
+        <p>Example University</p>
+        <p class="text-slate-500 text-sm">Office: Room XXX, Building YYY</p>
+        <p class="text-slate-500 text-sm">Email: yusaku.kato@example.com</p>
+      </div>
+    </section>
+
+    <!-- 研究関心 -->
+    <section aria-labelledby="research-heading">
+      <h2 id="research-heading" class="section-title">Research Interests</h2>
+      <ul class="space-y-2 list-none pl-0 text-slate-700">
+        {researchInterests.map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- 学歴 -->
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading" class="section-title">Education</h2>
+      <ul class="space-y-5 list-none pl-0">
+        {education.map((edu) => (
+          <li>
+            <p class="font-semibold text-slate-900">{edu.degree}</p>
+            <p class="text-slate-700">{edu.school} · <span class="text-slate-500">{edu.period}</span></p>
+            {edu.note && <p class="text-sm text-slate-500 mt-0.5">{edu.note}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- 職歴 -->
+    <section aria-labelledby="career-heading">
+      <h2 id="career-heading" class="section-title">Career</h2>
+      <ul class="space-y-5 list-none pl-0">
+        {career.map((job) => (
+          <li>
+            <p class="font-semibold text-slate-900">{job.title}</p>
+            <p class="text-slate-700">{job.org} · <span class="text-slate-500">{job.period}</span></p>
+            {job.note && <p class="text-sm text-slate-500 mt-0.5">{job.note}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- スキル・専門分野 -->
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="section-title">Skills & Expertise</h2>
+      <div class="space-y-4">
+        {skillGroups.map((group) => (
+          <div>
+            <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2">{group.category}</p>
+            <div class="flex flex-wrap gap-2">
+              {group.items.map((item) => <span class="tag">{item}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 研究キーワード -->
+    <section aria-labelledby="keywords-heading">
+      <h2 id="keywords-heading" class="section-title">Research Keywords</h2>
+      <div class="flex flex-wrap gap-2">
+        {keywords.map((kw) => (
+          <span class="tag text-sm px-3 py-1">{kw}</span>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Yusaku-Kato.github.io/sitemap-index.xml
