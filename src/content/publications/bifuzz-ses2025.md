@@ -3,6 +3,7 @@ title: "BiFuzz: A Two-Stage Fuzzing Tool for Open-World Video Games"
 authors: ["Yusaku Kato", "Norihiro Yoshida", "Erina Makihara", "Katsuro Inoue"]
 venue: "情報処理学会 ソフトウェアエンジニアリングシンポジウム (SES) ポスター発表"
 year: 2025
+month: 9
 type: "conference"
 tags: ["fuzzing", "software engineering", "video games"]
 featured: false

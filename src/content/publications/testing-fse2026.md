@@ -3,6 +3,7 @@ title: "Software Testing Beyond Closed Worlds: Open-World Games as an Extreme Ca
 authors: ["Yusaku Kato", "Norihiro Yoshida", "Erina Makihara", "Katsuro Inoue"]
 venue: "34th ACM International Conference on the Foundations of Software Engineering (FSE)"
 year: 2026
+month: 7
 type: "conference"
 tags: ["testing", "software engineering", "video games"]
 featured: true

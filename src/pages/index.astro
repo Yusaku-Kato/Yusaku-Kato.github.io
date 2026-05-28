@@ -3,11 +3,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-// Featured publications（最大3件）
+// Featured publications（最大3件。年の降順、同じ年なら月の降順）
 const allPublications = await getCollection("publications");
 const featuredPubs = allPublications
   .filter((p) => p.data.featured)
-  .sort((a, b) => b.data.year - a.data.year)
+  .sort((a, b) => {
+    if (b.data.year !== a.data.year) {
+      return b.data.year - a.data.year;
+    }
+    const aMonth = a.data.month ?? 0;
+    const bMonth = b.data.month ?? 0;
+    return bMonth - aMonth;
+  })
   .slice(0, 3);
 
 // Featured projects（最大2件）

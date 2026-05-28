@@ -5,8 +5,15 @@ import { getCollection } from "astro:content";
 
 const allPublications = await getCollection("publications");
 
-// 年の降順でソート
-const sorted = allPublications.sort((a, b) => b.data.year - a.data.year);
+// 年の降順でソート（同じ年なら月の降順）
+const sorted = allPublications.sort((a, b) => {
+  if (b.data.year !== a.data.year) {
+    return b.data.year - a.data.year;
+  }
+  const aMonth = a.data.month ?? 0;
+  const bMonth = b.data.month ?? 0;
+  return bMonth - aMonth;
+});
 
 // 年でグルーピング
 const byYear: Record<number, typeof sorted> = {};

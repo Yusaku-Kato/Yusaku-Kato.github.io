@@ -10,6 +10,7 @@ const publications = defineCollection({
     authors: z.array(z.string()),
     venue: z.string(),
     year: z.number(),
+    month: z.number().min(1).max(12).optional(),
     type: z.enum(["journal", "conference", "workshop", "preprint", "other"]),
     doi: z.string().optional(),
     pdf: z.string().optional(),

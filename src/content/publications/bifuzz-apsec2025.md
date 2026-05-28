@@ -3,6 +3,7 @@ title: "BiFuzz: A Two-Stage Fuzzing Tool for Open-World Video Games"
 authors: ["Yusaku Kato", "Norihiro Yoshida", "Erina Makihara", "Katsuro Inoue"]
 venue: "32nd Asia-Pacific Software Engineering Conference (APSEC)"
 year: 2025
+month: 12
 type: "conference"
 doi: "10.1109/APSEC66846.2025.00120"
 tags: ["fuzzing", "software engineering", "video games"]
