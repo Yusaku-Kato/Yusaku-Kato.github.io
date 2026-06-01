@@ -26,8 +26,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
         <div>
           <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Email</p>
-          <a href="mailto:is0610ks@ed.ritsumei.ac.jp" class="text-base font-medium text-slate-900 hover:text-blue-600" id="contact-email">
-            is0610ks@ed.ritsumei.ac.jp
+          <a data-e="vf0610xf@rq.evgfhzrv.np.wc" data-email-text="vf0610xf@rq.evgfhzrv.np.wc" class="text-base font-medium text-slate-900 hover:text-blue-600" id="contact-email">
+            <span data-email-label></span>
           </a>
         </div>
       </li>
@@ -90,3 +90,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </div>
 </BaseLayout>
+
+<script>
+  (function () {
+    function rot13(s) {
+      return s.replace(/[a-zA-Z]/g, function (c) {
+        return String.fromCharCode(
+          c.charCodeAt(0) + (c.toLowerCase() < 'n' ? 13 : -13)
+        );
+      });
+    }
+    // mailto: リンクの href を動的設定
+    document.querySelectorAll('a[data-e]').forEach(function (a) {
+      const addr = rot13(a.dataset.e);
+      a.href = 'mailto:' + addr;
+      // テキストラベルも動的生成
+      const label = a.querySelector('[data-email-label]');
+      if (label) label.textContent = addr;
+    });
+  })();
+</script>

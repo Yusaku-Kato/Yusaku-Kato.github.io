@@ -18,9 +18,10 @@ const lastUpdated = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
         GitHub
       </a>
       <a
-        href="mailto:is0610ks@ed.ritsumei.ac.jp"
+        data-e="vf0610xf@rq.evgfhzrv.np.wc"
         class="hover:text-slate-700 no-underline"
         aria-label="Email"
+        id="footer-email-link"
       >
         Email
       </a>
@@ -28,3 +29,18 @@ const lastUpdated = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    function rot13(s) {
+      return s.replace(/[a-zA-Z]/g, function (c) {
+        return String.fromCharCode(
+          c.charCodeAt(0) + (c.toLowerCase() < 'n' ? 13 : -13)
+        );
+      });
+    }
+    document.querySelectorAll('a[data-e]').forEach(function (a) {
+      a.href = 'mailto:' + rot13(a.dataset.e);
+    });
+  })();
+</script>

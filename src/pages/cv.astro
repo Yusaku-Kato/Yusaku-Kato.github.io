@@ -16,7 +16,7 @@ const pubs = allPublications.sort((a, b) => {
 const basicInfo = [
   { label: "Name", value: "Yusaku Kato" },
   { label: "Affiliation", value: "Ritsumeikan University" },
-  { label: "Email", value: "is0610ks@ed.ritsumei.ac.jp" },
+  { label: "Email", value: "", isEmail: true },
   { label: "GitHub", value: "github.com/Yusaku-Kato" },
   // ↑ 基本情報を変更してください
 ];
@@ -79,7 +79,11 @@ const skillGroups = [
         {basicInfo.map((item) => (
           <div>
             <dt class="text-slate-400 font-medium">{item.label}</dt>
-            <dd class="text-slate-800">{item.value}</dd>
+            {item.isEmail ? (
+              <dd class="text-slate-800"><span data-email-text="vf0610xf@rq.evgfhzrv.np.wc"></span></dd>
+            ) : (
+              <dd class="text-slate-800">{item.value}</dd>
+            )}
           </div>
         ))}
       </dl>
@@ -175,3 +179,18 @@ const skillGroups = [
 
   </div>
 </BaseLayout>
+
+<script>
+  (function () {
+    function rot13(s) {
+      return s.replace(/[a-zA-Z]/g, function (c) {
+        return String.fromCharCode(
+          c.charCodeAt(0) + (c.toLowerCase() < 'n' ? 13 : -13)
+        );
+      });
+    }
+    document.querySelectorAll('[data-email-text]').forEach(function (el) {
+      el.textContent = rot13(el.dataset.emailText);
+    });
+  })();
+</script>
