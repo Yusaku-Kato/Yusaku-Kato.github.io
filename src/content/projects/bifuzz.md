@@ -1,7 +1,7 @@
 ---
 title: "BiFuzz"
 summary: "A two-stage fuzzing tool for open-world video games to detect character stuck issues."
-period: "2024–Present"
+period: "2024–2025"
 role: "Lead Developer"
 technologies: ["C#", "Unity", "Fuzzing"]
 links:
