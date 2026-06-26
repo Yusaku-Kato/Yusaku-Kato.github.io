@@ -8,7 +8,7 @@ type: "conference"
 tags: ["game balance", "search-based testing", "boundary discovery"]
 featured: false
 bibtex: |
-  @INPROCEEDINGS{kato2026,
+  @INPROCEEDINGS{mukai2026,
     author={Mukai, Hiroki and Kato, Yusaku and Yoshida, Norihiro and Makihara, Erina and Inoue, Katsuro},
     booktitle={2026 41st IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
     title={Where Does Balance Break? Boundary Discovery for Game Balance Testing under a Finite Simulation Budget}, 

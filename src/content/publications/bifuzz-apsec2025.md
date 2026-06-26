@@ -9,7 +9,7 @@ doi: "10.1109/APSEC66846.2025.00120"
 tags: ["fuzzing", "software engineering", "video games"]
 featured: true
 bibtex: |
-  @INPROCEEDINGS{kato2025,
+  @INPROCEEDINGS{11396557,
     author={Kato, Yusaku and Yoshida, Norihiro and Makihara, Erina and Inoue, Katsuro},
     booktitle={2025 32nd Asia-Pacific Software Engineering Conference (APSEC)}, 
     title={BiFuzz: A Two-Stage Fuzzing Tool for Open-World Video Games}, 
