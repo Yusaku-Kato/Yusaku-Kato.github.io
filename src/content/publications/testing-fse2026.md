@@ -5,6 +5,7 @@ venue: "34th ACM International Conference on the Foundations of Software Enginee
 year: 2026
 month: 7
 type: "conference"
+doi: "10.1145/3803437.3805587"
 tags: ["testing", "software engineering", "video games"]
 featured: true
 bibtex: |
