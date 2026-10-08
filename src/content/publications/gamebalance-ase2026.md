@@ -5,6 +5,7 @@ venue: "41st IEEE/ACM International Conference on Automated Software Engineering
 year: 2026
 month: 10
 type: "conference"
+doi: "10.1145/3832783.3834407"
 tags: ["game balance", "search-based testing", "boundary discovery"]
 featured: false
 bibtex: |
