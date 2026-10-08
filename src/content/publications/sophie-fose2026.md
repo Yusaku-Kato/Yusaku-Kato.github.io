@@ -4,7 +4,7 @@ authors: ["加藤 優作", "吉田 則裕", "槇原 絵里奈", "井上 克郎"]
 venue: "日本ソフトウェア科学会 第33回ソフトウェア工学の基礎ワークショップ (FOSE) ライブ論文"
 year: 2026
 month: 11
-type: "workshop"
+type: "conference"
 tags: ["ファジング", "オープンワールドゲーム", "テスト自動化"]
 featured: false
 ---

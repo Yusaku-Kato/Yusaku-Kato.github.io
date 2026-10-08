@@ -4,7 +4,7 @@ authors: ["山口 裕世", "加藤 優作", "吉田 則裕", "槇原 絵里奈",
 venue: "日本ソフトウェア科学会 第33回ソフトウェア工学の基礎ワークショップ (FOSE) 研究論文：フルペーパー"
 year: 2026
 month: 11
-type: "workshop"
+type: "conference"
 tags: ["ファジング", "オープンワールドゲーム", "機械学習"]
 featured: false
 ---
