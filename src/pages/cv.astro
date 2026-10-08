@@ -134,7 +134,7 @@ const skillGroups = [
               <span class="font-medium">{pub.data.title}.</span>{" "}
               {pub.data.authors.map((a, j) => (
                 <span>
-                  {a === "Yusaku Kato" ? <strong>{a}</strong> : a}
+                  {["YusakuKato", "加藤優作"].includes(a.replace(/\s/g, "")) ? <strong>{a}</strong> : a}
                   {j < pub.data.authors.length - 1 && ", "}
                 </span>
               ))}.{" "}

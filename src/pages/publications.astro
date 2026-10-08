@@ -84,7 +84,7 @@ const typeColor: Record<string, string> = {
               <p class="text-sm text-slate-700">
                 {pub.data.authors.map((author, i) => (
                   <span>
-                    {author === "Yusaku Kato" ? (
+                    {["YusakuKato", "加藤優作"].includes(author.replace(/\s/g, "")) ? (
                       <strong class="text-slate-900">{author}</strong>
                     ) : (
                       author
@@ -113,7 +113,7 @@ const typeColor: Record<string, string> = {
                   </a>
                 )}
                 {pub.data.pdf && (
-                  <a href={pub.data.pdf} class="btn-link">PDF</a>
+                  <a href={pub.data.pdf} target="_blank" rel="noopener noreferrer" class="btn-link">PDF</a>
                 )}
                 {pub.data.code && (
                   <a

@@ -146,14 +146,21 @@ const researchInterests = [
           {featuredPubs.map((pub) => (
             <li class="border-l-2 border-slate-200 pl-4">
               <p class="font-semibold text-slate-900 leading-snug">{pub.data.title}</p>
-              <p class="text-sm text-slate-600 mt-0.5">{pub.data.authors.join(", ")}</p>
+              <p class="text-sm text-slate-600 mt-0.5">
+                {pub.data.authors.map((author, i) => (
+                  <span>
+                    {["YusakuKato", "加藤優作"].includes(author.replace(/\s/g, "")) ? <strong>{author}</strong> : author}
+                    {i < pub.data.authors.length - 1 && ", "}
+                  </span>
+                ))}
+              </p>
               <p class="text-sm text-slate-500 mt-0.5 italic">{pub.data.venue} · {pub.data.year}</p>
               <div class="flex flex-wrap gap-2 mt-1.5">
                 <span class="tag">{typeLabel[pub.data.type] ?? pub.data.type}</span>
                 {pub.data.doi && (
                   <a href={`https://doi.org/${pub.data.doi}`} target="_blank" rel="noopener noreferrer" class="btn-link">DOI</a>
                 )}
-                {pub.data.pdf && <a href={pub.data.pdf} class="btn-link">PDF</a>}
+                {pub.data.pdf && <a href={pub.data.pdf} target="_blank" rel="noopener noreferrer" class="btn-link">PDF</a>}
                 {pub.data.code && (
                   <a href={pub.data.code} target="_blank" rel="noopener noreferrer" class="btn-link">Code</a>
                 )}
